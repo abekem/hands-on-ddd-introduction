@@ -13,6 +13,7 @@ describe("Price", () => {
   it("無効な通貨コードの場合エラーを投げる", () => {
     const invalidCurrency = "USD";
     expect(() => {
+      // @ts-expect-error テストのために無効な値を渡す
       new Price({ amount: 500, currency: invalidCurrency });
     }).toThrow("現在は日本円のみを扱います。");
   });
