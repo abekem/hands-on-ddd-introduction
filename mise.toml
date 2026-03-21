@@ -1,2 +1,12 @@
 [tools]
 node = "24.6.0"
+
+[tasks.create]
+description = "Create a directory and a file inside it"
+usage = '''
+arg "<dir>" help="Directory to create"
+arg "<file>" help="File to create inside the directory"
+'''
+dir = "{{cwd}}"
+run = '''mkdir -p ${usage_dir} && touch ${usage_dir}/${usage_file}'''
+ 
