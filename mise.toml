@@ -9,4 +9,9 @@ arg "<file>" help="File to create inside the directory"
 '''
 dir = "{{cwd}}"
 run = '''mkdir -p ${usage_dir} && touch ${usage_dir}/${usage_file}'''
+
+[env]
+DB_HOST = "hands-on-ddd-introduction_devcontainer-db-1"
+DB_NAME = "postgres"
+DB_PASSWORD = "postgres"
  
