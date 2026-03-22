@@ -24,7 +24,7 @@ export class Review {
     return new Review(identity, bookId, name, rating, comment);
   }
 
-  static reconstrtuct(
+  static reconstruct(
     identity: ReviewIdentity,
     bookId: BookId,
     name: Name,
@@ -99,15 +99,15 @@ export class Review {
     return this._comment;
   }
   
-  updateName(newName: Name): void {
-    this._name = newName;
+  updateName(name: Name): void {
+    this._name = name;
   }
   
-  updateRating(newRating: Rating): void {
-    this._rating = newRating;
+  updateRating(rating: Rating): void {
+    this._rating = rating;
   }
   
-  updateComment(newComment: Comment): void {
-    this._comment = newComment;
+  editComment(comment: Comment): void {
+    this._comment = comment;
   }
 }
